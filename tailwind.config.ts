@@ -61,7 +61,20 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				portfolio: {
+					blue: '#1976D2',
+					lightBlue: '#64B5F6',
+					purple: '#9b87f5',
+					darkPurple: '#7E69AB',
+					teal: '#26A69A',
+					darkGray: '#333333',
+					lightGray: '#F5F5F5'
 				}
+			},
+			fontFamily: {
+				sans: ['Inter', 'sans-serif'],
+				heading: ['Poppins', 'sans-serif']
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,11 +97,47 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'slide-in-right': {
+					'0%': { transform: 'translateX(100%)', opacity: '0' },
+					'100%': { transform: 'translateX(0)', opacity: '1' }
+				},
+				'slide-out-right': {
+					'0%': { transform: 'translateX(0)', opacity: '1' },
+					'100%': { transform: 'translateX(100%)', opacity: '0' }
+				},
+				'slide-in-left': {
+					'0%': { transform: 'translateX(-100%)', opacity: '0' },
+					'100%': { transform: 'translateX(0)', opacity: '1' }
+				},
+				'slide-out-left': {
+					'0%': { transform: 'translateX(0)', opacity: '1' },
+					'100%': { transform: 'translateX(-100%)', opacity: '0' }
+				},
+				'fade-in': {
+					'0%': { opacity: '0' },
+					'100%': { opacity: '1' }
+				},
+				'fade-out': {
+					'0%': { opacity: '1' },
+					'100%': { opacity: '0' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'slide-in-right': 'slide-in-right 0.5s ease-out',
+				'slide-out-right': 'slide-out-right 0.5s ease-out',
+				'slide-in-left': 'slide-in-left 0.5s ease-out',
+				'slide-out-left': 'slide-out-left 0.5s ease-out',
+				'fade-in': 'fade-in 0.5s ease-out',
+				'fade-out': 'fade-out 0.5s ease-out'
+			},
+			backgroundImage: {
+				'gradient-blue': 'linear-gradient(135deg, #1976D2 0%, #64B5F6 100%)',
+				'gradient-purple': 'linear-gradient(135deg, #9b87f5 0%, #7E69AB 100%)',
+				'gradient-teal': 'linear-gradient(135deg, #26A69A 0%, #80CBC4 100%)',
+				'gradient-mixed': 'linear-gradient(135deg, #1976D2 0%, #9b87f5 50%, #26A69A 100%)'
 			}
 		}
 	},
