@@ -1,3 +1,4 @@
+
 import { useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Navbar from "../components/Navbar";
@@ -511,42 +512,42 @@ const Index = () => {
 
       <PortfolioSection
         id="home"
-        bgClass="bg-gradient-purple"
+        bgClass="bg-gradient-to-br from-[#9b87f5] to-[#7E69AB]"
         leftContent={homeLeftContent}
         rightContent={homeRightContent}
       />
       
       <PortfolioSection
         id="about"
-        bgClass="bg-gradient-blue"
+        bgClass="bg-gradient-to-br from-[#1976D2] to-[#64B5F6]"
         leftContent={aboutLeftContent}
         rightContent={aboutRightContent}
       />
       
       <PortfolioSection
         id="education"
-        bgClass="bg-gradient-teal"
+        bgClass="bg-gradient-to-br from-[#26A69A] to-[#80CBC4]"
         leftContent={educationLeftContent}
         rightContent={educationRightContent}
       />
       
       <PortfolioSection
         id="experience"
-        bgClass="bg-gradient-mixed"
+        bgClass="bg-gradient-to-br from-[#9b87f5] to-[#1976D2] via-[#26A69A]"
         leftContent={experienceLeftContent}
         rightContent={experienceRightContent}
       />
       
       <PortfolioSection
         id="skills"
-        bgClass="bg-gradient-purple"
+        bgClass="bg-gradient-to-br from-[#7E69AB] to-[#9b87f5]"
         leftContent={skillsLeftContent}
         rightContent={skillsRightContent}
       />
       
       <PortfolioSection
         id="projects"
-        bgClass="bg-gradient-blue"
+        bgClass="bg-gradient-to-br from-[#1976D2] to-[#26A69A]"
         leftContent={projectsLeftContent}
         rightContent={projectsRightContent}
       />
