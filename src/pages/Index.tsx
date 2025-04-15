@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Navbar from "../components/Navbar";
@@ -6,7 +5,6 @@ import PortfolioSection from "../components/PortfolioSection";
 import NavigationDots from "../components/NavigationDots";
 import Footer from "../components/Footer";
 
-// Define the sections for the portfolio
 const SECTIONS = [
   { id: "home", label: "Home" },
   { id: "about", label: "About" },
@@ -17,12 +15,10 @@ const SECTIONS = [
 ];
 
 const Index = () => {
-  // Update page title on mount
   useEffect(() => {
     document.title = "Manikandan S - Portfolio";
   }, []);
 
-  // Home Section - Left Content (Photo)
   const homeLeftContent = (
     <div className="flex flex-col gap-6">
       <motion.img 
@@ -54,7 +50,6 @@ const Index = () => {
     </div>
   );
 
-  // Home Section - Right Content (Contact Info)
   const homeRightContent = (
     <div className="space-y-6 text-white">
       <motion.div 
@@ -94,7 +89,7 @@ const Index = () => {
       >
         <div className="flex items-center gap-3">
           <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-portfolio-purple" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 11-2 2h-1C9.716 21 3 14.284 3 6V5z" />
           </svg>
           <span>+91 6379039339</span>
         </div>
@@ -122,7 +117,7 @@ const Index = () => {
       >
         <div className="flex items-center gap-3">
           <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-portfolio-purple" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207" />
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
           </svg>
           <span>Manikandan-sundaraj</span>
         </div>
@@ -130,7 +125,6 @@ const Index = () => {
     </div>
   );
 
-  // About Section - Left Content
   const aboutLeftContent = (
     <div>
       <h2 className="section-title text-white">About Me</h2>
@@ -150,20 +144,28 @@ const Index = () => {
     </div>
   );
 
-  // About Section - Right Content (CV Image)
   const aboutRightContent = (
     <div className="flex justify-center items-center h-full">
-      <motion.img 
-        src="/lovable-uploads/5a10b8c2-b377-4cbd-b93c-52fa96bef730.png" 
-        alt="Manikandan's Resume" 
-        className="max-h-[500px] w-auto rounded-lg shadow-xl border border-white/20"
-        whileHover={{ scale: 1.02 }}
-        transition={{ duration: 0.2 }}
-      />
+      <div className="space-y-6 text-white/90 max-w-md">
+        <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-colors">
+          <h3 className="text-xl font-semibold mb-4 text-portfolio-purple">Professional Journey</h3>
+          <p>
+            With a passion for AI and technology, I'm constantly learning and evolving. 
+            My goal is to leverage cutting-edge technologies to solve real-world problems 
+            and create innovative solutions.
+          </p>
+        </div>
+        <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-colors">
+          <h3 className="text-xl font-semibold mb-4 text-portfolio-blue">Career Aspiration</h3>
+          <p>
+            Aspiring to contribute to transformative AI projects that push the boundaries 
+            of what's possible, while continuously expanding my skills and knowledge.
+          </p>
+        </div>
+      </div>
     </div>
   );
 
-  // Education Section
   const educationLeftContent = (
     <div>
       <h2 className="section-title text-white">Education</h2>
@@ -185,7 +187,6 @@ const Index = () => {
     </div>
   );
 
-  // Education Section - Right Content (Decorative Element)
   const educationRightContent = (
     <div className="flex justify-center items-center h-full">
       <div className="relative">
@@ -212,7 +213,7 @@ const Index = () => {
             <div className="flex items-center gap-4">
               <div className="h-12 w-12 rounded-full bg-portfolio-blue flex items-center justify-center">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
                 </svg>
               </div>
               <div>
@@ -240,7 +241,6 @@ const Index = () => {
     </div>
   );
 
-  // Experience Section
   const experienceLeftContent = (
     <div>
       <h2 className="section-title text-white">Professional Experience</h2>
@@ -259,7 +259,6 @@ const Index = () => {
     </div>
   );
 
-  // Experience Section - Right Content (Skills Visualization)
   const experienceRightContent = (
     <div className="flex flex-col justify-center h-full">
       <h3 className="text-2xl font-bold mb-6 text-white">Key Responsibilities</h3>
@@ -297,7 +296,7 @@ const Index = () => {
           <div className="flex items-start gap-3">
             <div className="p-2 bg-portfolio-teal rounded-md mt-1">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20h2m-4 6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2z" />
               </svg>
             </div>
             <div>
@@ -310,7 +309,6 @@ const Index = () => {
     </div>
   );
 
-  // Skills Section
   const skillsLeftContent = (
     <div>
       <h2 className="section-title text-white">Skills & Technologies</h2>
@@ -361,7 +359,6 @@ const Index = () => {
     </div>
   );
 
-  // Skills Section - Right Content (Chart)
   const skillsRightContent = (
     <div className="flex justify-center items-center h-full">
       <div className="w-full max-w-md">
@@ -432,7 +429,6 @@ const Index = () => {
     </div>
   );
 
-  // Projects Section
   const projectsLeftContent = (
     <div>
       <h2 className="section-title text-white">Projects</h2>
@@ -462,14 +458,13 @@ const Index = () => {
     </div>
   );
 
-  // Projects Section - Right Content
   const projectsRightContent = (
     <div className="flex flex-col justify-center h-full">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div className="p-5 bg-white/10 backdrop-blur-sm rounded-lg hover:bg-white/20 transition-colors">
           <div className="h-12 w-12 rounded-lg bg-portfolio-purple flex items-center justify-center mb-4">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2z" />
             </svg>
           </div>
           <h3 className="text-lg font-medium text-white mb-2">Image Recognition</h3>
